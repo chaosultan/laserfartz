@@ -1,20 +1,16 @@
-#include "WiFi.h"
+#include <WiFi.h>
 
 void setup() {
-  // Initialize serial communication at 115200 baud rate
   Serial.begin(115200);
-  delay(1000); // Optional delay for stability
+  delay(2000);
 
-  // Set Wi-Fi to station mode and disconnect from any access point
+  // Initialize Wi-Fi in Station mode
   WiFi.mode(WIFI_STA);
-  WiFi.disconnect();
-  delay(100); // Short delay to ensure Wi-Fi is in station mode
+  WiFi.begin(); // Wi-Fi needs to be started to get a valid MAC
 
-  // Print the MAC address of the ESP32
-  Serial.println("ESP32 MAC Address: ");
+  // Get and print the MAC address
+  Serial.print("WiFi Station MAC Address: ");
   Serial.println(WiFi.macAddress());
 }
 
-void loop() {
-  // Empty loop
-}
+void loop() {}
