@@ -7,7 +7,7 @@ import os
 from datetime import datetime
 
 # Configure serial port
-SERIAL_PORT = '/dev/ttyUSB0'  # Change this to match your setup
+SERIAL_PORT = '/dev/ttyS0'  # Change this to match your setup
 BAUD_RATE = 115200
 
 # Alert configuration
@@ -18,7 +18,7 @@ ALERT_COOLDOWN = 2  # Minimum seconds between alerts
 
 # Sound files
 SYSTEM_UP_SOUND = 'fart_04.mp3'  # Played when laser first becomes active
-ALERT_SOUND = 'alert.mp3'  # Played for subsequent state changes
+ALERT_SOUND = 'fart_03.mp3'  # Played for subsequent state changes
 LOG_FILE = 'alerts.log'
 
 class ESPNowReceiverWithAlerts:
